@@ -18,7 +18,7 @@ def split_all_pages(pdf):
             writer=p.PdfWriter() #For each page, create a new PdfWriter object
             writer.add_page(each_page) 
             filename=os.path.basename(pdf)
-            output_name=f"{filename.replace(".pdf",)}_{i}.pdf" #filename fpr each of the splitted pdfs
+            output_name=f"{filename.replace(".pdf",)}_{i}.pdf" #filename for each of the splitted pdfs
             with open(output_name,"wb") as out:
             #writer: This is an instance of p.PdfWriter that has had a page added to it (writer.add_page(each_page)).
             # write(out): This method writes the content of the PdfWriter object to the file represented by out.
